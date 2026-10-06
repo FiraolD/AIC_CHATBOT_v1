@@ -1,6 +1,6 @@
-# 🛡️ Awash Insurance AI Assistant
+# 🛡️ smart Insurance AI Assistant
 
-The official AI assistant for Awash Insurance Company, providing accurate information about insurance products, claims process, and customer support.
+The official AI assistant for smart Insurance Company, providing accurate information about insurance products, claims process, and customer support.
 
 ## 🚀 Features
 
@@ -9,7 +9,7 @@ The official AI assistant for Awash Insurance Company, providing accurate inform
 - ✅ **Real-Time Streaming** - Immediate responses with typewriter effect
 - ✅ **Knowledge Base Integration** - Answers based on official insurance documents
 - ✅ **24/7 Availability** - Always ready to help customers
-- ✅ **Full Branding** - Matches Awash Insurance's visual identity
+- ✅ **Full Branding** - Matches smart Insurance's visual identity
 
 ## 🛠️ Technology Stack
 

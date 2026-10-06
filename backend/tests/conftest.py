@@ -52,7 +52,7 @@ from app.rag.retriever import RetrievalResult, retriever  # noqa: E402
 API_KEY = "test-api-key"
 AUTH_HEADERS = {"X-API-Key": API_KEY}
 
-CANNED_TOKENS = ["Awash ", "Insurance ", "offers ", "motor ", "coverage."]
+CANNED_TOKENS = ["smart ", "Insurance ", "offers ", "motor ", "coverage."]
 CANNED_ANSWER = "".join(CANNED_TOKENS)
 CANNED_SOURCES = [
     {

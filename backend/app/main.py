@@ -24,7 +24,7 @@ logger = logging.getLogger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    logger.info("Awash AI Assistant Backend starting")
+    logger.info("smart AI Assistant Backend starting")
 
     # Warm up the vector store (loads embeddings + FAISS index)
     from .rag.vector_store import vector_store  # noqa: F401
@@ -40,12 +40,12 @@ async def lifespan(app: FastAPI):
         logger.warning("Database unavailable; persistence disabled")
 
     yield
-    logger.info("Awash AI Assistant Backend shutting down")
+    logger.info("smart AI Assistant Backend shutting down")
 
 
 app = FastAPI(
-    title="Awash Insurance AI Assistant API",
-    description="Enterprise-grade intelligent chatbot for Awash Insurance customers",
+    title="smart Insurance AI Assistant API",
+    description="Enterprise-grade intelligent chatbot for smart Insurance customers",
     version="3.0.0",
     docs_url="/docs" if settings.debug else None,
     redoc_url=None,
