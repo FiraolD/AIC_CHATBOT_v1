@@ -43,18 +43,19 @@ const Header = ({ onNewConversation, hasMessages, onNavigate, currentView }) => 
       <div className="mx-auto flex h-16 max-w-3xl items-center justify-between gap-3 px-4">
         <div className="flex min-w-0 items-center gap-3">
           <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-awash-600 to-awash-900 shadow-soft">
-            <Shield className="h-5 w-5 text-white" aria-hidden="true" />
+            {/* <Shield className="h-5 w-5 text-white" aria-hidden="true" /> */}
+            <img src="/public/favicon3.png" alt="Smart Insurance" className="h-10 w-10 text-white" />
           </div>
           <div className="min-w-0">
             <h1 className="truncate text-sm font-semibold text-slate-900">
-              Awash Insurance
+              SMART INSURANCE
             </h1>
             <p className="flex items-center gap-1.5 text-xs text-slate-500">
               <span
                 className={`h-1.5 w-1.5 rounded-full ${dot} ${status === 'online' ? 'animate-pulse' : ''}`}
                 aria-hidden="true"
               />
-              <span className="truncate">AwashAI Assistant · {text}</span>
+              <span className="truncate">Smart AI Assistant · {text}</span>
             </p>
           </div>
         </div>

@@ -37,11 +37,23 @@ const QuotePage = ({ onBack }) => {
   const [error, setError] = useState(null);
   const [chatHistory, setChatHistory] = useState([]);
   const scrollRef = useRef(null);
+  const quoteRef = useRef(null);
 
-  // Auto-scroll chat
+  // Auto-scroll chat during questions
   useEffect(() => {
-    scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' });
+    if (step !== 'quote') {
+      scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' });
+    }
   }, [chatHistory, step]);
+
+  // Scroll quote summary into view when it appears
+  useEffect(() => {
+    if (step === 'quote' && quoteRef.current) {
+      setTimeout(() => {
+        quoteRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }, [step]);
 
   const selectProduct = useCallback(async (productId) => {
     try {
@@ -215,7 +227,11 @@ const QuotePage = ({ onBack }) => {
               />
             )}
 
-            {step === 'quote' && quote && <QuoteSummary quote={quote} onBack={onBack} />}
+            {step === 'quote' && quote && (
+              <div ref={quoteRef}>
+                <QuoteSummary quote={quote} onBack={onBack} />
+              </div>
+            )}
 
             {step === 'error' && (
               <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
@@ -309,7 +325,7 @@ const QuoteSummary = ({ quote, onBack }) => {
   return (
     <div className="mt-3 rounded-2xl border border-awash-200 bg-gradient-to-br from-awash-50 to-white p-5 animate-message-in shadow-card">
       <div className="mb-3 flex items-center gap-2">
-        <Sparkles className="h-5 w-5 text-awash-600" aria-hidden="true" />
+        <Sparkles className="h-2 w-2 text-awash-600" aria-hidden="true" />
         <h3 className="text-base font-semibold text-slate-900">Your Quote</h3>
       </div>
 
@@ -356,7 +372,7 @@ const QuoteSummary = ({ quote, onBack }) => {
 
       <div className="mt-4 flex flex-col gap-2 sm:flex-row">
         <a
-          href="tel:+251116185000"
+          href="/contact-us"
           className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-awash-700 px-4 py-3 text-sm font-medium text-white transition hover:bg-awash-800 active:scale-[0.97]"
         >
           Contact us to proceed

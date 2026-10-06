@@ -27,7 +27,7 @@ const Footer = () => (
         </span>
       </div>
       <p className="text-[11px] text-slate-400">
-        Answers are AI-generated. Please verify important details with Awash Insurance.
+        Answers are AI-generated. Please verify important details with Smart Insurance.
       </p>
     </div>
   </footer>

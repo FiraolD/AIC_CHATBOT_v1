@@ -60,7 +60,7 @@ const Composer = ({ onSend, onStop, disabled }) => {
             onChange={(event) => setValue(event.target.value)}
             onKeyDown={handleKeyDown}
             placeholder={
-              disabled ? 'AwashAI is responding...' : 'Ask about policies, claims, premiums...'
+              disabled ? 'Smart AI is responding...' : 'Ask about policies, claims, premiums...'
             }
             aria-label="Message"
             className="max-h-36 flex-1 resize-none bg-transparent py-1.5 text-[0.925rem] leading-relaxed text-slate-800 placeholder:text-slate-400 focus:outline-none"
