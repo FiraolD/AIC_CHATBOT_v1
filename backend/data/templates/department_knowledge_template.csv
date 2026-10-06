@@ -1,0 +1,2 @@
+department,category,question,answer,keywords,last_reviewed,owner
+<Department Name>,<Topic / Sub-area>,<Question a customer would ask>,<Authoritative answer in 2-4 sentences>,<Synonyms or abbreviations separated by semicolons>,<YYYY-MM-DD>,<Name and role>
