@@ -32,5 +32,7 @@ The official AI assistant for smart Insurance Company, providing accurate inform
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/awash-insurance/ai-assistant.git
-cd ai-assistant
+git clone https://github.com/FiraolD/AIC_CHATBOT_v1.git
+cd backend then run pyrhon -m app.main
+
+cd frontend then run npm run dev
